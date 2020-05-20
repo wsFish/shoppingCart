@@ -1,0 +1,40 @@
+.tips{
+  height:1.5rem;
+  width:4rem;
+  display:block;
+  top:50%;
+  left:50%;
+  background:rgba(0,0,0,0.8);
+  color:#fff;
+  position:absolute;
+  z-index:1;
+  transform: translate3d(-50%, -50%,0);
+  border-radius: 0.5rem;
+}
+
+.tips .content{
+  width:100%;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.show{
+  display:block;
+  animation: tip 2.1s linear;
+  animation-fill-mode :forwards;
+}
+
+@keyframes tip {
+  from{
+    transform:translate3d(-50%,-50%,0) scale(0);
+  }
+  30%{
+    transform:translate3d(-50%,-50%,0) scale(1);
+  }
+  60%{
+    transform:translate3d(-50%,-50%,0) scale(1);
+  }
+  to{
+    transform:translate3d(-50%,-50%,0) scale(0);
+  }
+}

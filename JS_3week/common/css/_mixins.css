@@ -1,0 +1,108 @@
+/*放置代码、函数*/
+
+.square-box{
+  width:100%;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.square-box > img {
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  object-fit: contain;
+}
+
+.hairline-top,
+.hairline-bottom,
+.hairline-left,
+.hairline-right,
+.hairline-top-bottom,
+.hairline-left-right,
+.hairline-surround{
+  position:relative;
+}
+
+
+/*边框虚化*/
+.hairline-top::after,
+.hairline-bottom::after,
+.hairline-left::after,
+.hairline-right::after,
+.hairline-top-bottom::after,
+.hairline-left-right::after,
+.hairline-surround::after{
+  content:'';
+  position:absolute;
+  width:200%;
+  height:200%;
+  top:0;
+  left: 0;
+  transform-origin:top left ;
+  transform:scale(0.5);
+  pointer-events: none;    /*  事件相关，不常用  */
+}
+
+.hairline-top::after{
+  border-top:var(--border-normal);
+}
+
+.hairline-bottom::after{
+  border-bottom: var(--border-normal);
+}
+
+.hairline-left::after{
+  border-left: var(--border-normal);
+}
+
+.hairline-right::after{
+  border-right:var(--border-normal);
+}
+
+.hairline-top-bottom::after{
+  border-top:var(--border-normal);
+  border-bottom: var(--border-normal);
+}
+
+.hairline-left-right::after{
+  border-left: var(--border-normal);
+  border-right: var(--border-normal);
+}
+
+.hairline-surround::after{
+  border:var(--border-normal);
+}
+
+.underline{
+  position:relative;
+}
+
+.underline::after{
+  content:'';
+  display: block;
+  border: 2px solid #ffd161;
+  width:50%;
+  height:0;
+  position:absolute;
+  left:50%;
+  bottom: 0;
+  transform: translate3d(-50%,0,0);
+}
+
+.blackboard{
+  position:relative;
+}
+
+.blackboard::after{
+  content: '';
+  position:absolute;
+  background: rgba(0,0,0,0.6);
+  z-index: var(--z-index-mask);
+  height: 100%;
+  width: 100%;
+  top:0;
+  left: 0;
+}

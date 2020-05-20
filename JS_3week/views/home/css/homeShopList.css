@@ -1,0 +1,156 @@
+@import "../../../common/css/index.css";
+
+.shop-header{
+  height:1rem;
+  text-align: center;
+  line-height: 1rem;
+  position:relative;
+}
+
+.shop-header::before,.shop-header::after{
+  content:'';
+  position: absolute;
+  top: 52%;
+  background: #494949;       /*宽和高做出来的背景横线*/
+  width: 9%;
+  height: 2%;
+}
+.shop-header::before{
+  left:30%;
+}
+.shop-header::after{
+  right:30%;
+}
+
+.shop-items{
+  width:100%;
+  position:relative;
+  /*border:1px solid;*/
+  display:flex;
+  margin: 0.2rem 0;
+}
+
+.img-father{
+  height:1.25rem;
+  /*border:var(--border-normal);*/
+  width:30%;
+  padding: 0 0.3rem 0 0.3rem;
+  overflow:hidden;
+}
+
+.img-father .img{
+  position: relative;
+}
+
+.img-father .img img{
+  object-fit:cover;
+  height:100%;
+  width:100%;
+}
+
+.img-father .img .brand{
+  position:absolute;
+  color:#fff;
+  left: 0;
+  height: 0.25rem;
+  font-size: 0.2rem;
+}
+
+.img-father .img .new-brand{
+  background: #9bde56;
+}
+
+.img-father .img .old-brand{
+  background: #ffa627;
+}
+
+.content{
+  /*border:1px solid;*/
+  width:70%;
+  right:0;
+  color:#919191;
+}
+
+.content .shop-name{
+  /*border:1px solid;*/
+  font-size: 0.3rem;
+  font-weight: 600;
+}
+
+.shop-name{
+  color:black;
+}
+
+.shop-situation{
+  display:flex;
+  /*border:1px solid red;*/
+  width:100%;
+  font-size: 0.2rem;
+}
+
+.shop-situation .shop-stars,.sales,.distance-time{
+  /*border:var(--border-normal);*/
+  display: flex;
+  justify-content: center;   /*水平居中*/
+  align-items: center;     /*高度居中*/
+  margin:0.1rem 0;
+}
+
+.shop-stars > .stars{
+  height:0.2rem;
+}
+
+.sales{
+  width:1rem;
+}
+
+.distance-time{      /*deliver-time和distance的父容器*/
+  width:30%;
+  right:0;
+  margin: 0 0.1rem 0 1rem;
+}
+
+.delivery-time,.distance{
+  height:0.2rem;
+  width:50%;
+  display: flex;
+  /*border:var(--border-normal);*/
+  align-items: center;     /*高度居中*/
+  justify-content: center;   /*水平居中*/
+}
+.delivery-time{
+  left:0;
+}
+
+.distance{
+  right:0;
+}
+
+.delivery-fee{
+  width: 100%;
+  font-size: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.others{
+  padding:0.1rem 0 0 0;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.others > .discount{
+  display: flex;
+  height:20%;
+}
+
+.others .discount .icon-photo,.information{
+  font-size: smaller;
+  margin: 0.05rem 0.1rem;
+}
+
+.others .discount .icon-photo{
+  width: 0.3rem;
+}

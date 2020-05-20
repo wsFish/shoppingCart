@@ -1,0 +1,9 @@
+@import "_base.css";         /*放置基本样式*/
+@import "_reset.css";        /*样式重置*/
+@import "_variables.css";    /*放置变量*/
+@import "_container.css";    /*放置父容器的样式*/
+@import "_mixins.css";       /*放置代码、函数*/
+
+@import "../../components/navTab/index.css";      /*底部导航栏样式*/
+@import "../../components/loading/index.css";     /*loading样式*/
+@import "../../components/tips/index.css";      /*tip样式*/

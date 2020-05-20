@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c79db5a-8831-4a55-9b62-98a44c981bea" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bC8nW4X7ofmhJ4ig1xbJblkL6m" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jsx.switch.disabled" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../js_第二周/早上好/my/good_Single.html" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\js_learning\JS_第三周\views\shopping\left" />
+      <recent name="E:\js_learning\JS_第三周\views\shopping\js" />
+      <recent name="E:\js_learning\JS_第三周\components\error" />
+      <recent name="E:\js_learning\JS_第三周\views\home\js" />
+      <recent name="E:\js_learning\JS_第三周\views\home\css" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JS_第三周/views/home/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c79db5a-8831-4a55-9b62-98a44c981bea" name="Default Changelist" comment="" />
+      <created>1588124881215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588124881215</updated>
+      <workItem from="1588124883719" duration="2406000" />
+      <workItem from="1588127309313" duration="23423000" />
+      <workItem from="1588207592377" duration="24185000" />
+      <workItem from="1588295380189" duration="1936000" />
+      <workItem from="1588509635323" duration="6054000" />
+      <workItem from="1588680334738" duration="6875000" />
+      <workItem from="1588726480921" duration="7215000" />
+      <workItem from="1588737768879" duration="1067000" />
+      <workItem from="1588739603043" duration="22111000" />
+      <workItem from="1588813154453" duration="26861000" />
+      <workItem from="1588899499307" duration="52830000" />
+      <workItem from="1589083881874" duration="301000" />
+      <workItem from="1589158280416" duration="104526000" />
+      <workItem from="1589504345576" duration="23665000" />
+      <workItem from="1589764353110" duration="47144000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="70" key="#Custom_Plugin_Repositories" timestamp="1588739399830">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#Custom_Plugin_Repositories/0.0.1536.824@0.0.1536.824" timestamp="1588739399830" />
+    <state x="361" y="70" key="#HTTP_Proxy" timestamp="1588739395874">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="70" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1588739395874" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589854022835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589854022835" />
+    <state x="351" y="100" key="SettingsEditor" timestamp="1589796994719">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="351" y="100" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589796994719" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1589193940648">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589193940648" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589448432515">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589448432515" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+/*样式重置*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;      /*下划线去掉*/
+}
+
+ul,
+ol {
+  list-style: none;           /*圆圈、数字去掉*/
+}
+
+button,
+input,
+input:disabled,
+textarea {
+  outline: none;
+  border: none;
+  background-color: #fff;
+}

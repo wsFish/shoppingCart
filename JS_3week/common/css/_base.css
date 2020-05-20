@@ -1,0 +1,11 @@
+/*   放置基本样式   */
+html,
+body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  max-width: 670px;
+  margin: 0 auto;
+  font-size: var(--font-size-normal);
+}
