@@ -1,8 +1,10 @@
 import '../../../common/js/rem.js';
-import {_, getBack, parseToNode} from "../../../utils/index.js";
+import {_,__,getBack, parseToNode} from "../../../utils/index.js";
 import {leftList} from "../left/left.js";
 import {deliverFee} from '../../../API/shopping.js';
 import {rightList} from "../right/right.js";
+import {clickTips} from "../../../components/clickTip/clickTips.js";
+import {REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST} from "../../../API/vender/constants.js";
 
 const tempFooterContent = `
   <div class="shopping-cost-contain">
@@ -10,6 +12,10 @@ const tempFooterContent = `
     <div class="delivery-fee">__delivery__</div>
   </div>
 `;
+
+
+
+let returnNum = '';
 
 rendering();
 
@@ -55,12 +61,31 @@ function footerClick() {
   const footer = _('.shop-show-footer');
   const shoppingList = _('.shop-show-all-content');
   const cartList = _('.shopping-cart-list');
+  const clearCartList = _('.clear-cart-list-contain');
+  const shopCartListShow = _('.shopping-cart-list-show');
+
   footer.addEventListener('click',() => {
     shoppingList.classList.add('blackboard');
     cartList.classList.add('list-show');
+
+    const shopCartItem= __('.shopping-cart-item');
+    const tempEmptyTip = `
+    <div class="empty-tip">购物车空空如也</div>
+    `;
+
+    if(shopCartItem.length === 0) shopCartListShow.appendChild(parseToNode(tempEmptyTip)[0]);
+    if(returnNum === '') returnNum = clickTips(clearCartList,REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST);
+    else {
+      const {elOverRemove,cel} = returnNum;
+      returnNum = clickTips(clearCartList,REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST,elOverRemove,cel);
+    }
     shoppingList.addEventListener('click',() => {
+      const emptyTip = _('.empty-tip');
       shoppingList.classList.remove('blackboard');
       cartList.classList.remove('list-show');
+      const tipsRemove =  _('.tip-show-container');
+      if(tipsRemove) tipsRemove.remove();
+      if(emptyTip) emptyTip.remove();
     })
   })
 }

@@ -11,3 +11,7 @@ export const ERROR_TIMEOUT = '请求超时，请稍后再试';
 export const ERROR_NETWORK = '网络错误，请检查网络';
 
 export const ERROR_UNKNOWN = '未知错误，请联系服务人员';
+
+export const REMOVE_LIST_INFORMATION = '确定清空购物车吗';   //shopCalItem.js    //shopRenderingItem.js
+
+export const EMITTER_REMOVE_LIST = 'remove-all-list';  //shopRenderingItem.js

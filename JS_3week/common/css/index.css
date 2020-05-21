@@ -7,3 +7,4 @@
 @import "../../components/navTab/index.css";      /*底部导航栏样式*/
 @import "../../components/loading/index.css";     /*loading样式*/
 @import "../../components/tips/index.css";      /*tip样式*/
+@import "../../components/clickTip/clickTip.css";   /*clickTip样式*/
