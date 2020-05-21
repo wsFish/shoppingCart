@@ -1,5 +1,6 @@
 import {_, __,parseToNode,parentNodeNeed,emitter} from "../../../utils/index.js";
 import {EMITTER_REMOVE_LIST} from "../../../API/vender/constants.js";
+import InitFactory from "../../../utils/initFactory.js";
 
 let price = 0;
 let food = 0;
@@ -20,22 +21,31 @@ const tempShoppingCartList = `
   </div>
 `;
 
-emitter.on(EMITTER_REMOVE_LIST,()=> {
-  const shopList = __('.shopping-cart-item');
-  shopList.forEach(e => {
-    addOrMinusCalc(e.itemData,false,true);
-  })
-});
 
-/**
- * @param el                  遍历出的 + / - 按钮
- * @param {boolean}add        判断是否为  +   按钮，默认为是
- */
+class ShopCalItem extends InitFactory {
+  beforeMount() {
+    emitter.on(EMITTER_REMOVE_LIST, () => {
+      const shopList = __('.shopping-cart-item');
+      shopList.forEach(e => {
+        addOrMinusCalc(e.itemData, false, true);
+      })
+    });
+  }
 
-export function plusOrMinusButton(el,add = true) {
-  const numFood = parentNodeNeed(el,5).itemData;
-  addOrMinusCalc(numFood,add);
+  getData() {}
+
+  handleData() {}
+
+
 }
+
+new ShopCalItem();
+
+export function plusOrMinusButton(el, add = true) {
+  const numFood = parentNodeNeed(el, 5).itemData;
+  addOrMinusCalc(numFood, add);
+}
+
 
 function addOrMinusCalc(data,add = true,empty = false) {
   const priceTotal = _('.all-price');

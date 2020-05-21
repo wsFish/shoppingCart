@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c79db5a-8831-4a55-9b62-98a44c981bea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/components/clickTip/clickTip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/initFactory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/vender/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/vender/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/css/_variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/_variables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/common/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/shopping/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/shopping/js/emptyCart.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/clickTip/clickTips.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/shopping/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home/js/getHomeNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/js/getHomeNav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home/js/getHomeShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/js/getHomeShop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/shopping/js/shopCalItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/js/shopCalItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/shopping/js/shopRenderingItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/js/shopRenderingItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shopping/left/left.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/left/left.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -91,8 +88,16 @@
       <workItem from="1589504345576" duration="23665000" />
       <workItem from="1589764353110" duration="47144000" />
       <workItem from="1589944377645" duration="24178000" />
-      <workItem from="1590022520785" duration="690000" />
+      <workItem from="1590022520785" duration="11879000" />
     </task>
+    <task id="LOCAL-00001" summary="删除部分冗余代码">
+      <created>1590025185881</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590025185881</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +139,10 @@
       </set>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="删除部分冗余代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除部分冗余代码" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Custom_Plugin_Repositories" timestamp="1588739399830">
       <screen x="0" y="0" width="1536" height="824" />
@@ -143,6 +152,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1588739395874" />
+    <state x="360" y="2" key="CommitChangelistDialog2" timestamp="1590025183065">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590025183065" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589957801264">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -155,10 +168,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1589972564904" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1589998100288">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1590029413618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589998100288" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1590029413618" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589448432515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

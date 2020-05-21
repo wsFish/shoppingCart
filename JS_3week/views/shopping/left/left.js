@@ -1,6 +1,7 @@
 import {shop_item_list} from "../../../API/shopping.js";
 import {_, __, parseToNode} from "../../../utils";
 import {rightList} from '../right/right.js';
+import InitFactory from "../../../utils/initFactory.js";
 
 
 const tempLeftSortItem = `
@@ -12,8 +13,7 @@ const tempLeftSortItem = `
   </div>
 `;
 
-
-export function leftList() {
+export function leftList(){
   return shop_item_list().then(data => {
     data.forEach( e => {
       handleData(e);
@@ -32,14 +32,13 @@ export function leftList() {
   });
 }
 
-function handleData(item) {
 
+function handleData(item) {
   const {name,icon} = item;
   const leftSortItem = tempLeftSortItem
     .replace('__img__',icon)
     .replace('__name__',name)
     .replace('__tOf__',icon?'true':'false');
-
   const el = parseToNode(leftSortItem)[0];
   el.itemData = item;
   _('.left-menu').appendChild(el);
@@ -57,4 +56,3 @@ function clickLeftItem() {
     })
   })
 }
-
