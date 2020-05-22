@@ -1,5 +1,5 @@
 import {_, __,parseToNode,parentNodeNeed,emitter} from "../../../utils/index.js";
-import {EMITTER_REMOVE_LIST} from "../../../API/vender/constants.js";
+import {EMITTER_REMOVE_LIST,EMITTER_UP_DATA} from "../../../API/vender/constants.js";
 import InitFactory from "../../../utils/initFactory.js";
 
 let price = 0;
@@ -21,7 +21,6 @@ const tempShoppingCartList = `
   </div>
 `;
 
-
 class ShopCalItem extends InitFactory {
   beforeMount() {
     emitter.on(EMITTER_REMOVE_LIST, () => {
@@ -29,13 +28,18 @@ class ShopCalItem extends InitFactory {
       shopList.forEach(e => {
         addOrMinusCalc(e.itemData, false, true);
       })
-    });
+    })
+      .on(EMITTER_UP_DATA,(listNumNode) => {
+        const priceTotal = _('.all-price');
+        priceTotal.textContent = `￥${price}`;
+        redNum(food);
+        listNumNode.forEach(e => e.querySelector('.right-list-item-num').textContent = e.itemData.foodNum);
+      });
   }
 
   getData() {}
 
   handleData() {}
-
 
 }
 
@@ -46,10 +50,8 @@ export function plusOrMinusButton(el, add = true) {
   addOrMinusCalc(numFood, add);
 }
 
-
 function addOrMinusCalc(data,add = true,empty = false) {
-  const priceTotal = _('.all-price');
-  const listNumNode = __('.right-list-item-num');
+  const listNumNode = __('.right-list-item');
   if(empty === true){
     data.foodNum = 0;
     price = 0;
@@ -75,9 +77,7 @@ function addOrMinusCalc(data,add = true,empty = false) {
       }
     }
   }
-  priceTotal.textContent = `￥${price}`;
-  redNum(food);
-  listNumNode.forEach(e => e.textContent = parentNodeNeed(e,4).itemData.foodNum);
+  emitter.emit(EMITTER_UP_DATA,listNumNode);
   //遍历所有值，查看是否有foodNum的值发生变化
 }
 
@@ -159,6 +159,7 @@ function redNum(foodTotal) {
     }
     else redSign.textContent = foodTotal;
   }
+  else if(!redSign && foodTotal === 0) {}
   else{
     const cartImg = _('.shopping-cart-img');
     const tempRedSign = `<div class="red-sign"></div>`;

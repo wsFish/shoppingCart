@@ -56,37 +56,58 @@ class Rendering extends InitFactory{
   }
 
   footerClick() {
-    const footer = _('.shop-show-footer');
+    const footer = _('.shopping-cost-container');
     const shoppingList = _('.shop-show-all-content');
     const cartList = _('.shopping-cart-list');
     const clearCartList = _('.clear-cart-list-contain');
-    const shopCartListShow = _('.shopping-cart-list-show');
+    let clickReady = null;
 
     footer.addEventListener('click',() => {
       shoppingList.classList.add('blackboard');
       cartList.classList.add('list-show');
-
       const shopCartItem= __('.shopping-cart-item');
-      const tempEmptyTip = `
-    <div class="empty-tip">购物车空空如也</div>
-    `;
+      const emptyTip = _('.empty-tip');
+      if(shopCartItem.length === 0 && !emptyTip) this.emptyCartTip();
 
-      if(shopCartItem.length === 0) shopCartListShow.appendChild(parseToNode(tempEmptyTip)[0]);
       if(returnNum === '') returnNum = clickTips(clearCartList,REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST);
       else {
-        const {elOverRemove,cel} = returnNum;
-        returnNum = clickTips(clearCartList,REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST,elOverRemove,cel);
-      }
-      shoppingList.addEventListener('click',() => {
-        const emptyTip = _('.empty-tip');
+        returnNum = clickTips(clearCartList,REMOVE_LIST_INFORMATION,EMITTER_REMOVE_LIST,returnNum);
+      }    //获得clickTip返回值，防止添加多个监听器
+
+      if(clickReady) shoppingList.removeEventListener('click',clickReady);
+      shoppingList.addEventListener('click',clickReady = () => {
+        let emptyTip = _('.empty-tip');
+        console.log(1);
+        let tipsRemove =  _('.tip-show-container');
+        if(Array.from(cartList.classList).some(e => e === 'list-show')) {
+          cartList.classList.add('list-disappear');
+          setTimeout(()=> {
+            const cartListDisappear = _('.list-disappear');
+            cartListDisappear.classList.remove('list-disappear');
+          },300);
+        }
+
         shoppingList.classList.remove('blackboard');
         cartList.classList.remove('list-show');
-        const tipsRemove =  _('.tip-show-container');
-        if(tipsRemove) tipsRemove.remove();
-        if(emptyTip) emptyTip.remove();
+        if(tipsRemove){
+          tipsRemove.remove();
+          tipsRemove = null;
+        }              //移除提示框
+        if(emptyTip) {
+          emptyTip.remove();
+          emptyTip = null;
+        }             //移除购物车空信息的提示
       })
     })
   }
+
+  emptyCartTip(){
+    const shopCartListShow = _('.shopping-cart-list-show');
+    const tempEmptyTip = `
+    <div class="empty-tip">购物车空空如也</div>
+    `;
+    shopCartListShow.appendChild(parseToNode(tempEmptyTip)[0]);
+  }     //如果购物车为空，则添加显示信息
 }
 
 new Rendering();

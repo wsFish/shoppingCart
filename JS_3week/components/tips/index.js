@@ -26,7 +26,7 @@ export default function tip (tips) {
 }
 
 function show(el) {
-  document.body.appendChild(el);           //将div置入页面中不用通过单例，否则删除后就不再添加了，单例仅仅判断是否重复产生即可。
+  document.body.appendChild(el);      //将div置入页面中不用通过单例，否则删除后就不再添加了，单例仅仅判断是否重复产生即可。
   el.classList.add("show");
   return true
 }
@@ -39,13 +39,6 @@ function hide(el) {
   }, 2500)
 
 }
-
-// function getSingle( fn ){
-//   let instance;
-//   return function(){
-//     return instance || ( instance = fn .apply( this, arguments ));
-//   }
-// }
 
 function append(html) {
   return parseToNode(html)[0];

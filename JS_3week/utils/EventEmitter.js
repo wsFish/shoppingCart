@@ -1,6 +1,6 @@
 class EventEmitter{
-  constructor() {
-    this.listeners = {};
+  constructor(){
+    this.listeners = {}
   }
   on(type,cb){
     const fns = this.listeners[type] || (this.listeners[type] = []);
@@ -9,16 +9,17 @@ class EventEmitter{
   }
   off(type,cb){
     const fns = this.listeners[type];
-    if(!fns || fns.listeners === 0) return;
+    if(!fns || (fns.listeners === 0)) return;
     this.listeners[type] = fns.filter(fn => fn !== cb);
     return this;
   }
   emit(type,...args){
     const fns = this.listeners[type];
-    if(!fns || fns.listeners === 0) return;
-    fns.forEach(fn => fn.call(this,...args));
+    if(!fns || (fns.listeners === 0)) return;
+    fns.forEach(e => e.call(this,...args));
   }
 }
+
 
 export default (() => {
   let instance;

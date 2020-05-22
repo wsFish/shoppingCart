@@ -24,12 +24,11 @@
 }
 
 .left-menu-item-img{
-  display: block;
-  width:0.25rem;
+  align-items: center;
 }
 
 .left-menu-item-img > img{
-  width:100%;
+  width: 50%;
   object-fit: contain;
 }
 

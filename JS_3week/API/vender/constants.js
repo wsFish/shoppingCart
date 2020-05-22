@@ -15,3 +15,5 @@ export const ERROR_UNKNOWN = '未知错误，请联系服务人员';
 export const REMOVE_LIST_INFORMATION = '确定清空购物车吗';   //shopCalItem.js    //shopRenderingItem.js
 
 export const EMITTER_REMOVE_LIST = 'remove-all-list';  //shopRenderingItem.js
+
+export const EMITTER_UP_DATA = 'up-data';    //shopCalItem.js

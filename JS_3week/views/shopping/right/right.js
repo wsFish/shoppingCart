@@ -1,5 +1,7 @@
-import {_, __, parseToNode} from "../../../utils/index.js";
+import {_, __, parseToNode,emitter} from "../../../utils/index.js";
 import {plusOrMinusButton} from "../js/shopCalItem.js";
+import {renderLoading} from "../../../components/index.js";
+import {EMITTER_UP_DATA} from "../../../API/vender/constants.js";
 
 const tempTitleAndContain = `
   <div class="shopping-right-all">
@@ -36,13 +38,28 @@ const tempRightContent = `
   </div>
 `;
 
+const cacheDom = {};
 
 export function rightList(leftList) {
   rightListItemRendering(leftList);
 }
 
 function rightListItemRendering(leftList) {
-  const {spus,name} = leftList.itemData;
+  const {tag} = leftList.itemData;
+  if(cacheDom[tag]) renderFromCache(cacheDom[tag]);
+  else {
+    let loadingEl = renderLoading();
+    _('.right-commodity').appendChild(loadingEl);
+    setTimeout(()=>{
+      handleData(leftList.itemData);
+      loadingEl.remove();
+      loadingEl = null;
+    },500);
+  }
+}
+
+function handleData(obj) {
+  const {spus,name,tag} = obj;
   let html = '';
   spus.forEach(e => {
     const {
@@ -69,8 +86,16 @@ function rightListItemRendering(leftList) {
     .replace('__content__',html);
   const nodeTitleAndContain = parseToNode(titleAndContain)[0];
   _('.right-commodity').appendChild(nodeTitleAndContain);
-  const rightItem = _('.shopping-right-all');
 
+  const cache = cacheDom[tag] || (cacheDom[tag]=[]);       //添加缓存列表，如果没有cacheDom[tag]，则cache定义为空数组
+
+  cache.push(nodeTitleAndContain);
+
+  rightClick(obj);
+}
+
+function rightClick(obj) {
+  const rightItem = _('.shopping-right-all');
   rightItem.addEventListener('click',e => {
     const className = e.target.parentNode.className;
     if(className === 'right-list-item-plus') plusOrMinusButton(e.target);
@@ -78,5 +103,10 @@ function rightListItemRendering(leftList) {
   });   //为整个右侧页面添加点击事件，用target得到相应的内容
 
   const rightContentNode = __('.right-list-item');
-  rightContentNode.forEach((e,i) => e.itemData = leftList.itemData.spus[i]);
+  rightContentNode.forEach((e,i) => e.itemData = obj.spus[i]);
 }
+
+function renderFromCache(data) {
+  emitter.emit(EMITTER_UP_DATA,data[0].querySelectorAll('.right-list-item'));    //up-data
+  _('.right-commodity').appendChild(data[0]);
+}    //将缓存数据加入页面

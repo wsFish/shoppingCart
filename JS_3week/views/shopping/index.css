@@ -109,11 +109,17 @@
   background: #fff;
   display: none;
   flex-direction: column;
+  animation: unShows 0.3s linear;
 }
 
 .shop-footer .list-show{
   display: flex;
-  animation:shows 0.1s linear;
+  animation:shows 0.3s linear;
+}
+
+.shop-footer .list-disappear{
+  display: flex;
+  animation:unShows 0.3s linear;
 }
 
 @keyframes shows{
@@ -122,6 +128,15 @@
   }
   to{
     transform: translateY(0);
+  }
+}
+
+@keyframes unShows {
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform:translateY(100%);
   }
 }
 

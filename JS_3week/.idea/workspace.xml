@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c79db5a-8831-4a55-9b62-98a44c981bea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/initFactory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/js/getHomeNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/js/getHomeNav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home/js/getHomeShop.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/home/js/getHomeShop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/vender/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/API/vender/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/clickTip/clickTips.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/clickTip/clickTips.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/tips/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/tips/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/EventEmitter.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/EventEmitter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shopping/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/shopping/js/shopCalItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/js/shopCalItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/shopping/js/shopRenderingItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/js/shopRenderingItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shopping/left/left.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/left/left.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/shopping/left/left.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/left/left.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/shopping/right/right.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/shopping/right/right.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +30,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="git@github.com:wsFish/shoppingCart.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1bC8nW4X7ofmhJ4ig1xbJblkL6m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -88,7 +99,8 @@
       <workItem from="1589504345576" duration="23665000" />
       <workItem from="1589764353110" duration="47144000" />
       <workItem from="1589944377645" duration="24178000" />
-      <workItem from="1590022520785" duration="11879000" />
+      <workItem from="1590022520785" duration="22626000" />
+      <workItem from="1590108500611" duration="21839000" />
     </task>
     <task id="LOCAL-00001" summary="删除部分冗余代码">
       <created>1590025185881</created>
@@ -97,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590025185881</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="使用模板方法模式，将主要代码进行规范化。">
+      <created>1590039357127</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590039357127</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,6 +150,13 @@
             </State>
           </value>
         </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
       </map>
     </option>
     <option name="OPEN_TABS">
@@ -141,7 +167,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除部分冗余代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除部分冗余代码" />
+    <MESSAGE value="使用模板方法模式，将主要代码进行规范化。" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用模板方法模式，将主要代码进行规范化。" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="70" key="#Custom_Plugin_Repositories" timestamp="1588739399830">
@@ -152,10 +179,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="70" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1588739395874" />
-    <state x="360" y="2" key="CommitChangelistDialog2" timestamp="1590025183065">
+    <state x="360" y="2" key="CommitChangelistDialog2" timestamp="1590140463226">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="360" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590025183065" />
+    <state x="360" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590140463226" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589957801264">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
